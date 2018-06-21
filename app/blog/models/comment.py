@@ -37,9 +37,9 @@ class CommentLike(models.Model):
         related_name='comment_like',
     )
     user = models.ForeignKey(
-        Comment,
+        BlogUser,
         on_delete=models.CASCADE,
-        related_name='comment_like_user'
+        related_name='comment_like_user',
     )
 
     comment_like_unlike = models.CharField(max_length=1, choices=COMMENT_LIKE_UNLIKE)
